@@ -1,0 +1,328 @@
+{% extends "layout.html" %} {% block content %}
+<div id="carousel" class="carousel slide dis" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="50000">
+      <section
+        id="banner"
+        class="site-blocks-cover overlay"
+        data-aos="fade"
+        data-stellar-background-ratio="0.5"
+      >
+        <div class="container inner">
+          <header>
+            <h1>Welcome to UCoE Newsfeed</h1>
+          </header>
+
+          <div class="flex">
+            <div class="back">
+              <span class="icon fa-car"></span>
+              <h3>Academics</h3>
+              <p>we offer 4 years full-time Bachelor of Technology</p>
+            </div>
+
+            <div class="back">
+              <span class="icon fa-camera"></span>
+              <h3>Admissions</h3>
+              <p>
+                Admission will be on the basis of inter-se merit of candidates
+              </p>
+            </div>
+
+            <div class="back">
+              <span class="icon fa-bug"></span>
+              <h3>Activities</h3>
+              <p>Inter-college events, VYRO and more.</p>
+            </div>
+          </div>
+
+          <footer>
+            <a href="#" class="button">Find out more</a>
+          </footer>
+        </div>
+      </section>
+    </div>
+    <div class="carousel-item" data-interval="50000">
+      <section
+        id="three"
+        class="wrapper align-center"
+        style="background-color: #fff;"
+      >
+        <div class="inner">
+          <div class="flex flex-2">
+            <article>
+              <div class="image round">
+                <img src="static/images/pic01.jpg" alt="Pic 01" />
+              </div>
+              <header>
+                <h3>
+                  Some Thing<br />
+                  you should know
+                </h3>
+              </header>
+              <p>
+                You are not the first person and you wont be last<br />Many will
+                come follow in same footstep until they know<br />What you
+                ask...........well something good ofcourse.
+              </p>
+              <footer>
+                <a href="#" class="button">Learn More</a>
+              </footer>
+            </article>
+            <article>
+              <div class="image round">
+                <img src="static/images/pic02.jpg" alt="Pic 02" />
+              </div>
+              <header>
+                <h3>
+                  Some More Thing<br />
+                  Some thing good
+                </h3>
+              </header>
+              <p>
+                Rather than that boring thing<br />Lemme Tell u a joke<br />
+                Hahahahahaa......are you kidding me.
+              </p>
+              <footer>
+                <a href="#" class="button">Learn More</a>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="carousel-item" data-interval="50000">
+      <footer id="footer">
+        <div class="inner">
+          <h3>Help us Locate you</h3>
+
+          <form method="post">
+            <div class="field half first">
+              <label for="name">Name</label>
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Name"
+                class="form-control"
+              />
+            </div>
+            <div class="field half">
+              <label for="email">Email</label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Email"
+                class="form-control"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Message"
+                class="form-control"
+              ></textarea>
+            </div>
+            <ul class="actions">
+              <li>
+                <input value="Send Message" class="button alt" type="submit" />
+              </li>
+            </ul>
+          </form>
+
+          <div class="copyright">
+            &copy; Copyright ©2020 All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <a
+    class="carousel-control carousel-control-prev"
+    href="#carousel"
+    role="button"
+    data-slide="prev"
+  >
+    <span
+      class="carousel-control carousel-control-prev-icon"
+      aria-hidden="true"
+    ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control carousel-control-next"
+    href="#carousel"
+    role="button"
+    data-slide="next"
+  >
+    <span
+      class="carousel-control carousel-control-next-icon"
+      aria-hidden="true"
+    ></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+  <!-- Banner -->
+</div>
+<section
+  id="banner"
+  class="site-blocks-cover overlay cod"
+  data-aos="fade"
+  data-stellar-background-ratio="0.5"
+>
+  <div class="container inner">
+    <header>
+      <h1>Welcome to UCoE Newsfeed</h1>
+    </header>
+
+    <div class="flex">
+      <div class="back">
+        <span class="icon fa-car"></span>
+        <h3>Academics</h3>
+        <p>we offer 4 years full-time Bachelor of Technology</p>
+      </div>
+
+      <div class="back">
+        <span class="icon fa-camera"></span>
+        <h3>Admissions</h3>
+        <p>
+          Admission will be on the basis of inter-se merit of candidates
+        </p>
+      </div>
+
+      <div class="back">
+        <span class="icon fa-bug"></span>
+        <h3>Activities</h3>
+        <p>Inter-college events, VYRO and more.</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="#" class="button">Find out more</a>
+    </footer>
+  </div>
+</section>
+<!-- Three -->
+
+<section
+  id="three"
+  class="wrapper align-center cod"
+  style="background-color: #fff;"
+>
+  <div class="inner">
+    <div class="flex flex-2">
+      <article>
+        <div class="image round">
+          <img src="static/images/pic01.jpg" alt="Pic 01" />
+        </div>
+        <header>
+          <h3>
+            Some Thing<br />
+            you should know
+          </h3>
+        </header>
+        <p>
+          You are not the first person and you wont be last<br />Many will come
+          follow in same footstep until they know<br />What you
+          ask...........well something good ofcourse.
+        </p>
+        <footer>
+          <a href="#" class="button">Learn More</a>
+        </footer>
+      </article>
+      <article>
+        <div class="image round">
+          <img src="static/images/pic02.jpg" alt="Pic 02" />
+        </div>
+        <header>
+          <h3>
+            Some More Thing<br />
+            Some thing good
+          </h3>
+        </header>
+        <p>
+          Rather than that boring thing<br />Lemme Tell u a joke<br />
+          Hahahahahaa......are you kidding me.
+        </p>
+        <footer>
+          <a href="#" class="button">Learn More</a>
+        </footer>
+      </article>
+    </div>
+  </div>
+  <div class="posts">
+    {% if posts %} {% for post in posts %}
+    <div class="post">
+      <p class="title">
+        <a href="/post/{{post.key()}}">{{post.val().title}}</a>
+      </p>
+      <p class="author">by {{post.val().author}}</p>
+    </div>
+    {% endfor %} {% endif %}
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer id="footer" class="cod">
+  <div class="inner">
+    <h3>Help us Locate you</h3>
+
+    <form method="post">
+      <div class="field half first">
+        <label for="name">Name</label>
+        <input
+          name="name"
+          id="name"
+          type="text"
+          placeholder="Name"
+          class="form-control"
+        />
+      </div>
+      <div class="field half">
+        <label for="email">Email</label>
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="Email"
+          class="form-control"
+        />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="6"
+          placeholder="Message"
+          class="form-control"
+        ></textarea>
+      </div>
+      <ul class="actions">
+        <li>
+          <input
+            value="Send Message"
+            class="button alt"
+            type="submit"
+            name="submit"
+          />
+        </li>
+      </ul>
+    </form>
+
+    <div class="copyright">
+      &copy; Copyright ©2020 All rights reserved.
+    </div>
+  </div>
+</footer>
+
+{% endblock content %}

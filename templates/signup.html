@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block content %}
+<div class="banner1">
+  <main role="main" class="container ">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content-section">
+          <div class="contain">
+            <div class="card"></div>
+            <div class="card">
+              <!-- <div class="toggle"></div> -->
+              <h1 class="title">
+                Signup
+                <!-- <div class="close"></div> -->
+              </h1>
+              <form method="POST">
+                <div class="input-container">
+                  <input type="text" name="name" id="" required="required" />
+
+                  <label for="#{label}">Name</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="lastname" id="" required="required" />
+
+                  <label for="#{label}">Last Name</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="email" name="email" id="" required="required" />
+
+                  <label for="#{label}">Email</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="password" name="password" id="" required="required" />
+
+                  <label for="#{label}">Password</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                  <button type="submit" name="submit" value="signup" style="    box-shadow: inset 0 0 0 3px #ed2553;
+        color: #ed2553 !important;"><span>SUBMIT</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- <h1>SIGNUP</h1>
+          <form method="POST">
+            <input type="text" name="name" id="" placeholder="Name" />
+            <input type="text" name="lastname" id="" placeholder="Last Name" required="required" />
+            <input type="email" name="email" id="" placeholder="Email" required="required" />
+            <input type="password" name="password" id="" placeholder="Password" required="required" />
+            <button type="submit" name="submit" value="signup">SUBMIT</button>
+          </form> -->
+        </div>
+      </div>
+  </main>
+</div>
+{% endblock content %}

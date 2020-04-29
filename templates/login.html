@@ -1,0 +1,77 @@
+{% extends "layout.html" %} {% block content %}
+<div class="banner1">
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content-section">
+          <div class="contain">
+            <div class="card"></div>
+            <div class="card">
+              <h1 class="title">Login</h1>
+              <form method="POST">
+                <div class="input-container">
+                  <input type="email" name="email" id="email" required="required" />
+                  <!-- <input type="#{type}" id="#{label}" required="required" /> -->
+                  <label for="email">Email</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="password" name="password" id="password" required="required" />
+                  <!-- <input type="#{type}" id="#{label}" required="required" /> -->
+                  <label for="password">Password</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                  <button type="submit" name="submit" value="login" style="
+                      box-shadow: inset 0 0 0 3px #ed2553;
+                      color: #ed2553 !important;
+                    ">
+                    <span>SUBMIT</span>
+                  </button>
+                  <!-- <button><span>Go</span></button> -->
+                </div>
+              </form>
+              <div class="footer">
+                <form method="POST">
+                  <button class="forgot" type="submit" style="all: unset;" name="submit" value="pass">
+                    <a style="color: #d3d3d3;"> Forgot your password?</a>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- <h1>LOGIN</h1>
+          <form method="POST">
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" id="" placeholder="Email" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="password" name="password" id="" placeholder="Password" />
+            </div>
+            <div class="form-group">
+              <button type="submit" name="submit" value="login">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+        <form method="POST">
+          <button type="submit" name="submit" value="pass">FORGOT</button>
+        </form>
+
+        <h1>ADD NEWS</h1>
+        <form method="POST">
+          <input class="form-control" type="text" name="headline" placeholder="Headline" />
+          <input class="form-control" type="text" name="story" placeholder="Story" />
+          <button class="form-control" type="submit" name="submit" value="add">
+            POST
+          </button>
+        </form> -->
+
+          {% for l in t %}
+          <ul>
+            <li>{{l}}</li>
+          </ul>
+        </div>
+      </div>
+  </main>
+</div>
+{% endfor%} {% endblock content %}

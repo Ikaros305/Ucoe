@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block content %}
+<div data-aos="fade-in" class="aos-init aos-animate" style="
+margin-top: 125px;
+"> 
+    <div
+      class="Container-sc-1e7uphc-0 bKAWec"
+    >
+      <div class="head-pat">
+        <div class="partners">
+
+          <div class="partners-contain">
+            <div class="partners-cont">
+              <div class="columns is-multiline">
+              
+                {% for dict_item in news.values()|reverse %} {% for key, value in
+                  dict_item.items() %}
+                  <div class="column">
+
+                      <div class="box interview-grid-item has-text-centered">
+                        <div class="interview-grid-item__avatar">
+                          <div
+                            class="partners--logo sb-avatar sb-avatar--src"
+                            style="
+                              display: inline-block;
+                              vertical-align: middle;
+                              border-radius: 100%;
+                              font-family: Helvetica, Arial, sans-serif;
+                            "
+                          >
+                            <img
+                              class="partners--logo sb-avatar__image"
+                           
+                              src="static\2.jpg"
+                              alt="Default"
+                              style="
+                                max-width: 100%;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div class="partners-desc">
+                          <p class="title is-5">{{key}}</p>
+                        </div>
+                        <div class="partners-desc">
+                          <p   id="demo{{key}}" class="collapse in title is-6" style=" "> {{value}}</p>
+                        </div>
+                        {% if auth.current_user == None %}
+                        <a href="login" style="text-decoration: none; color:black ;cursor:pointer"><h5>view more</h5></a>
+                          {% else %}
+                          <button class="butt" data-toggle="collapse" data-target="#demo{{key}}"style="all: unset;"><h5>view more</h5></button>
+                           {% endif %}
+                        </div>
+
+                  </div>
+                  {% endfor %} {% endfor %}
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% endblock content %}

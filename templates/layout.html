@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UCoE</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="note" content="environment=development" />
+    <link rel="stylesheet" href="static/assets/css/main2.css" />
+    <link rel="stylesheet" href="static/assets/css/feed.css" />
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="static/assets/css/style.css" />
+    <link rel="stylesheet" href="static/assets/css/style1.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="background-color: #646674;">
+    <div class="site-wrap" style="z-index: 20005;">
+      <div class="site-mobile-menu" style="z-index: 20006;">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header class="site-navbar" role="banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="shi">
+              <div class="col-11 col-xl-4">
+                <div id="logo" class="logo">
+                  <a href="/">
+                    <img src="static/images/logo.png" alt="" class="high" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8 d-none d-xl-block">
+              <nav
+                class="site-navigation position-relative text-right"
+                role="navigation"
+              >
+                <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li class="active">
+                    <a href="/"><span>Home</span></a>
+                  </li>
+                  <li class="has-children">
+                    <a href="#"><span>Courses</span></a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#">Computer</a></li>
+                      <li><a href="#">Information Technology</a></li>
+                      <li><a href="#">Civil</a></li>
+                      <li><a href="#">Electronics</a></li>
+                      <li><a href="#">EXTC</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><span>Contact</span></a>
+                  </li>
+
+                  <li>
+                    <a href="news"><span>News</span></a>
+                  </li>
+                  <li>
+                    <a href="webinar"><span>Webinar</span></a>
+                  </li>
+                  {% if auth.current_user == None %}
+                  <li>
+                    <a href="login"><span>Login</span></a>
+                  </li>
+                  <li>
+                    <a href="signup"><span>Signup</span></a>
+                  </li>
+                  {% else %}
+                  <li>
+                    <form method="POST">
+                      <a href="#" style="text-decoration: none;">
+                        <button
+                          type="submit"
+                          name="submit"
+                          value="logout"
+                          style="all: unset;"
+                        >
+                          <span>LogOut</span>
+                        </button></a
+                      >
+                    </form>
+                  </li>
+                  {% endif %}
+                </ul>
+              </nav>
+            </div>
+
+            <div
+              class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+              style="position: relative; top: 3px;"
+            >
+              <a href="#" class="site-menu-toggle js-menu-toggle text-white"
+                ><span class="icon-menu h3"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    {% block content %}{% endblock %}
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/skel.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
+    <script src="static/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="static/assets/js/aos.js"></script>
+    <script src="static/assets/js/res.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("logo").style.display = "none";
+        } else {
+          document.getElementById("logo").style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#carousel").carousel({
+          interval: 100000,
+          wrap: false,
+        });
+
+        $("#carousel").on("slid.bs.carousel", function () {
+          //alert("slid");
+        });
+
+        $("#carousel").on("slid.bs.carousel", "", function () {
+          var $this = $(this);
+
+          $this.children(".carousel-control").show();
+
+          if ($(".carousel-inner .carousel-item:first").hasClass("active")) {
+            $this.children(".carousel-control-prev.carousel-control").hide();
+          } else if (
+            $(".carousel-inner .carousel-item:last").hasClass("active")
+          ) {
+            $this.children(".carousel-control-next.carousel-control").hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

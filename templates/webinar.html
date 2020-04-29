@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block content %}
+<div data-aos="fade-in" class="aos-init aos-animate" style="margin-top: 125px;">
+  <div class="Container-sc-1e7uphc-0 bKAWec">
+    <div class="head-pat">
+      <div class="partners" style="width: 100%;">
+        <div class="partners-contain">
+          <div class="partners-cont">
+            <div class="columns is-multiline">
+              <div class="column" style="width: 100%; margin-top: 50px;">
+                <div class="box interview-grid-item" style="padding: 10px;">
+                  {% if auth.current_user == None %}
+                  <iframe
+                    class="vid"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/h_IhUTfszpA?controls=0&amp;end=10"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <a
+                    href="login"
+                    style="
+                      text-decoration: none;
+                      color: black;
+                      cursor: pointer;
+                    "
+                    ><h5>view more</h5></a
+                  >
+                  {% else %}
+                  <iframe
+                    class="vid"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/h_IhUTfszpA?"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

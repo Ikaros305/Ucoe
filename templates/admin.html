@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+
+<body>
+    <h1>ADD NEWS</h1>
+    <form method="POST">
+        <input type="text" name="headline" placeholder="Headline">
+        <input type="text" name="story" placeholder="Story">
+        <button type="submit" name="submit" value="add">POST</button>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="submit" value="home">HOME</button>
+    </form>
+
+    <h1>Queries</h1>
+    {% block content %}
+    <div class="queries">
+        {% if querys %}
+        {% for query in querys %}
+        <div class="query">
+            <p class="q_email">{{query.val().email}}</p>
+            <p class="q_message">by {{query.val().message}}</p>
+            <p class="q_name">by {{query.val().name}}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+    {% endblock content %}
+    
+</body>
+
+</html>
